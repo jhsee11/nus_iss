@@ -3,11 +3,11 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
 function App() {
-  const [text, setText] = useState();
+  const [text, setText] = useState('');
 
   useEffect(() => {
     axios
-      .get('https://nus-iss-app.herokuapp.com/')
+      .get('https://nus-iss-app.herokuapp.com/api/text')
       .then((res) => {
         console.log('hoseh la');
         setText(res.data);

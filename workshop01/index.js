@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const dotenv = require('dotenv');
+const path = require('path');
 
 const corsOptions = {
   origin: 'http://localhost:3000',
@@ -24,7 +25,7 @@ const text_list = [
   'It is pitch dark. You are likely to be eaten by a grue.',
 ];
 
-app.get('/', (req, res) => {
+app.get('/api/text', (req, res) => {
   let random_text = text_list[Math.floor(Math.random() * text_list.length)];
   res.send(random_text);
 });
