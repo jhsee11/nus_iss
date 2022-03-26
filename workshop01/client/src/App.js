@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5001/')
+      .get('https://nus-iss-app.herokuapp.com/')
       .then((res) => {
         console.log('hoseh la');
         setText(res.data);
