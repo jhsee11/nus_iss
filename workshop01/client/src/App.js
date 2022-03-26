@@ -3,7 +3,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
 function App() {
-  const [text, setText] = useState('');
+  const [text, setText] = useState('zz');
 
   useEffect(() => {
     axios
@@ -11,7 +11,7 @@ function App() {
       .then((res) => {
         console.log('hoseh la');
         setText(res.data);
-        console.log(`Returned text is ${text}`);
+        console.log(`Returned text is ${res.data}`);
       })
       .catch((err) => {
         console.log(err);
