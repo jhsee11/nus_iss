@@ -3,7 +3,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
 function App() {
-  const [text, setText] = useState('zz');
+  const [text, setText] = useState('');
 
   useEffect(() => {
     axios
